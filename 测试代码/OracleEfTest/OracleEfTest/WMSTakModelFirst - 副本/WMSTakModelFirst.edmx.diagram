@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="836d2a6f9ed34b5f82d26ad04d134018" Name="Diagram1" ZoomLevel="98">
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.Base_BackupJob" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.Base_Button" Width="1.5" PointX="5.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.Base_ButtonPermission" Width="1.5" PointX="12.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.Base_CodeRule" Width="1.5" PointX="7.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.Base_CodeRuleDetail" Width="1.5" PointX="9.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.Base_CodeRuleSerious" Width="1.5" PointX="11.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.Base_Company" Width="1.5" PointX="13.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.Base_DataDictionary" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.Base_DataDictionaryDetail" Width="1.5" PointX="0.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.Base_DataScopePermission" Width="1.5" PointX="2.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.Base_Department" Width="1.5" PointX="15.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.Base_Email" Width="1.5" PointX="7.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.Base_EmailAccessory" Width="1.5" PointX="10" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.Base_EmailAddressee" Width="1.5" PointX="10" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.Base_EmailCategory" Width="1.5" PointX="15.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.Base_Employee" Width="1.5" PointX="15.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.Base_ExcelImport" Width="1.5" PointX="16.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.Base_ExcelImportDetail" Width="1.5" PointX="17.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.Base_FormAttribute" Width="1.5" PointX="17.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.Base_FormAttributeValue" Width="1.5" PointX="17.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.Base_GroupUser" Width="1.5" PointX="18.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.Base_InterfaceManage" Width="1.5" PointX="10.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.Base_InterfaceManageParameter" Width="1.5" PointX="13" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.Base_Language" Width="1.5" PointX="2.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.Base_Module" Width="1.5" PointX="4.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.Base_ModulePermission" Width="1.5" PointX="19.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.Base_NetworkFile" Width="1.5" PointX="6.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.Base_NetworkFolder" Width="1.5" PointX="8.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.Base_ObjectUserRelation" Width="1.5" PointX="19.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.Base_PhoneNote" Width="1.5" PointX="10.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.Base_Post" Width="1.5" PointX="19.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.Base_ProvinceCity" Width="1.5" PointX="19.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.Base_QueryRecord" Width="1.5" PointX="20.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.Base_Roles" Width="1.5" PointX="21.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.Base_Shortcuts" Width="1.5" PointX="21.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.Base_SysLog" Width="1.5" PointX="5.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.Base_SysLogDetail" Width="1.5" PointX="8" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.Base_User" Width="1.5" PointX="12.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.Base_View" Width="1.5" PointX="21.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.Base_ViewPermission" Width="1.5" PointX="21.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.Base_ViewWhere" Width="1.5" PointX="22.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.Base_ViewWherePermission" Width="1.5" PointX="21.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.DB_Import_InPlanDetail" Width="1.5" PointX="0.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.ModuleInfo" Width="1.5" PointX="23.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.POOrder" Width="1.5" PointX="23.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.POOrderEntry" Width="1.5" PointX="23.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_AllocationMain" Width="1.5" PointX="17.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_AllocationPlanDetail" Width="1.5" PointX="23.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_AllocationPlanMain" Width="1.5" PointX="14.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_BHDetail" Width="1.5" PointX="25.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_BHMain" Width="1.5" PointX="6.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_BHTemp" Width="1.5" PointX="25.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_BillNumber" Width="1.5" PointX="8.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_BusinessInfo" Width="1.5" PointX="25.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_CarInfo" Width="1.5" PointX="25.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_CheckDetail" Width="1.5" PointX="2.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_CheckMain" Width="1.5" PointX="19.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_CheckPlanDetail" Width="1.5" PointX="25.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_CheckPlanMain" Width="1.5" PointX="27.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_ChildBatchManage" Width="1.5" PointX="27.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_ContainerInfo" Width="1.5" PointX="27.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_ContainerType" Width="1.5" PointX="27.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_ExamineDetail" Width="1.5" PointX="27.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_ExamineMain" Width="1.5" PointX="27.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_InDetail" Width="1.5" PointX="8.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_InMain" Width="1.5" PointX="29.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_InOrderDetail" Width="1.5" PointX="29.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_InOrderMain" Width="1.5" PointX="29.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_InOrderTemp" Width="1.5" PointX="29.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_InPlanDetail" Width="1.5" PointX="29.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_InPlanMain" Width="1.5" PointX="10.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_InPlanTemp" Width="1.5" PointX="12.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_InTemp" Width="1.5" PointX="14.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_JXD" Width="1.5" PointX="16.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_JXDMX" Width="1.5" PointX="31.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_LaneStatus" Width="1.5" PointX="4.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_Location" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_LocationContainerMap" Width="1.5" PointX="31.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_LocationFunction" Width="1.5" PointX="31.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_Materials" Width="1.5" PointX="31.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_MaterialsBusinessMap" Width="1.5" PointX="21.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_MaterialsLocationMap" Width="1.5" PointX="31.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_MaterialsSorts" Width="1.5" PointX="18.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_MaterialStorageArea" Width="1.5" PointX="31.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_OutDetail" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_OutMain" Width="1.5" PointX="3" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_OutOrderDetail" Width="1.5" PointX="33.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_OutOrderMain" Width="1.5" PointX="0.75" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_OutPlanDetail" Width="1.5" PointX="33.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_OutPlanMain" Width="1.5" PointX="33.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_OutPlanTemp" Width="1.5" PointX="33.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_OutTask" Width="1.5" PointX="23.75" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_OutTaskBHDetail" Width="1.5" PointX="25.75" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_OutTaskBHMain" Width="1.5" PointX="33.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_OutTaskJHDetail" Width="1.5" PointX="35.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_OutTaskJHMain" Width="1.5" PointX="6.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_OutTaskZHDetail" Width="1.5" PointX="35.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_OutTaskZHMain" Width="1.5" PointX="35.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_OutTemp" Width="1.5" PointX="35.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_PackSpec" Width="1.5" PointX="35.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_PrinthHstoryTable" Width="1.5" PointX="27.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_PrintTable" Width="1.5" PointX="35.75" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_ProductBatch" Width="1.5" PointX="2.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_QualityCheck" Width="1.5" PointX="8.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_RebuildApplyDetail" Width="1.5" PointX="14.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_RebuildApplyMain" Width="1.5" PointX="20.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_RebuildMain" Width="1.5" PointX="37.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_RebuildPlanDetail" Width="1.5" PointX="37.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_RebuildPlanMain" Width="1.5" PointX="16.75" PointY="37.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_Stockpile" Width="1.5" PointX="37.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_StorageArea" Width="1.5" PointX="37.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_StorageAreaMaterialMap" Width="1.5" PointX="37.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_SupplierMaterialsStorageArea" Width="1.5" PointX="37.75" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_Tasks" Width="1.5" PointX="10.75" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_TasksMainTemp" Width="1.5" PointX="0.75" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_TasksTemp" Width="1.5" PointX="3" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_TasksType" Width="1.5" PointX="29.75" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_TaskTypePostMap" Width="1.5" PointX="31.75" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_Transit" Width="1.5" PointX="39.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_TransitMain" Width="1.5" PointX="0.75" PointY="39.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_UnloadingPlace" Width="1.5" PointX="2.75" PointY="39.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_ZHDetail" Width="1.5" PointX="39.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_ZHMain" Width="1.5" PointX="39.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.WMS_ZHTemp" Width="1.5" PointX="39.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.XPObjectType" Width="1.5" PointX="39.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.Base_Supplies" Width="1.5" PointX="39.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.Table_location" Width="1.5" PointX="39.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.View_AreaCode" Width="1.5" PointX="22.75" PointY="40.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.View_InDettail" Width="1.5" PointX="24.75" PointY="40.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.View_Location" Width="1.5" PointX="33.75" PointY="40.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.View_LocationFunctionCode" Width="1.5" PointX="35.75" PointY="40.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.View_OutDettail" Width="1.5" PointX="41.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.View_OutTaskJHDetai" Width="1.5" PointX="4.75" PointY="41.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.View_OutTaskZHDetail" Width="1.5" PointX="41.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_WMS_TAKModel.View_Transit" Width="1.5" PointX="41.75" PointY="12.75" IsExpanded="true" />
+        <AssociationConnector Association="DB_WMS_TAKModel.FK_Base_EmailAccessory_Base_Email" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_WMS_TAKModel.FK_Base_EmailAddressee_Base_Email" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_WMS_TAKModel.FK_Base_InterfaceManageParameter_Base_InterfaceManage" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_WMS_TAKModel.FK_Base_SysLogDetail_Base_SysLog" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_WMS_TAKModel.FK_WMS_OutMain_LocationId" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_WMS_TAKModel.FK_WMS_OutDetail_OutCode" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_WMS_TAKModel.FK_WMS_TasksTemp_TaskTempId" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

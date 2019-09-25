@@ -1,0 +1,8 @@
+﻿.vs/
+obj/
+bin/
+/测试代码/OracleEfTest/OracleEfTest/obj
+/测试代码/OracleEfTest/.vs
+/测试代码/OracleEfTest/OracleEfTest/bin
+/测试代码/OracleEfTest/Tools/obj
+/测试代码/OracleEfTest/Tools/bin

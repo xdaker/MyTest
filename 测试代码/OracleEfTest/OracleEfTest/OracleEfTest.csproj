@@ -1,0 +1,903 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8DD4B1AF-CCED-489F-9D5A-4DF5447C035E}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OracleEfTest</RootNamespace>
+    <AssemblyName>OracleEfTest</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.18.3, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.18.3.0\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess.EntityFramework, Version=6.122.18.3, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.EntityFramework.18.3.0\lib\net45\Oracle.ManagedDataAccess.EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseData\ACTIVITYLOG.cs" />
+    <Compile Include="BaseData\ADJUSTMENT.cs" />
+    <Compile Include="BaseData\ADJUSTMENTDETAIL.cs" />
+    <Compile Include="BaseData\ALLOCATIONSTRATEGY.cs" />
+    <Compile Include="BaseData\ALLOCATIONSTRATEGYDETAIL.cs" />
+    <Compile Include="BaseData\AREA.cs" />
+    <Compile Include="BaseData\AUDITSN.cs" />
+    <Compile Include="BaseData\AUTO_LOCATION.cs" />
+    <Compile Include="BaseData\CARRIER.cs" />
+    <Compile Include="BaseData\CARTONTYPE.cs" />
+    <Compile Include="BaseData\CCPLAN.cs" />
+    <Compile Include="BaseData\CCTASK.cs" />
+    <Compile Include="BaseData\CF_PRIVILEGE.cs" />
+    <Compile Include="BaseData\CF_ROLE.cs" />
+    <Compile Include="BaseData\CF_USER.cs" />
+    <Compile Include="BaseData\CF_USERROLE.cs" />
+    <Compile Include="BaseData\COMPANY.cs" />
+    <Compile Include="BaseData\CONTRACT.cs" />
+    <Compile Include="BaseData\CROSSDOCKING.cs" />
+    <Compile Include="BaseData\CROSSDOCKINGLINE.cs" />
+    <Compile Include="BaseData\CURRENT_WAVE.cs" />
+    <Compile Include="BaseData\CUSTOMER.cs" />
+    <Compile Include="BaseData\CUSTOMER_MATERIAL.cs" />
+    <Compile Include="BaseData\DATAFILTER.cs" />
+    <Compile Include="BaseData\DISPATCHNODE.cs" />
+    <Compile Include="BaseData\Group.cs" />
+    <Compile Include="BaseData\GROUPCOMPANY.cs" />
+    <Compile Include="BaseData\GROUPWAREHOUSE.cs" />
+    <Compile Include="BaseData\HANSTEMP1.cs" />
+    <Compile Include="BaseData\HIS_DPS_CMD.cs" />
+    <Compile Include="BaseData\HIS_WCS_TRK.cs" />
+    <Compile Include="BaseData\INVENTORY.cs" />
+    <Compile Include="BaseData\INVENTORYCHANGEPLAN.cs" />
+    <Compile Include="BaseData\INVENTORYCHANGEPLANHISTORY.cs" />
+    <Compile Include="BaseData\INVTRANSACTION.cs" />
+    <Compile Include="BaseData\LOCATION.cs" />
+    <Compile Include="BaseData\LOGINGLOG.cs" />
+    <Compile Include="BaseData\LOTATTRTEMPLATE.cs" />
+    <Compile Include="BaseData\LOTATTRTEMPLATEITEMS.cs" />
+    <Compile Include="BaseData\LOTRECORDS.cs" />
+    <Compile Include="CWWMS\WMSDbContext.cs" />
+    <Compile Include="JJWMS\ACTIVITYLOG.cs" />
+    <Compile Include="JJWMS\ADJUSTMENT.cs" />
+    <Compile Include="JJWMS\ADJUSTMENTDETAIL.cs" />
+    <Compile Include="JJWMS\ALLOCATIONSTRATEGY.cs" />
+    <Compile Include="JJWMS\ALLOCATIONSTRATEGYDETAIL.cs" />
+    <Compile Include="JJWMS\AREA.cs" />
+    <Compile Include="JJWMS\AUDITSN.cs" />
+    <Compile Include="JJWMS\AUTO_LOCATION.cs" />
+    <Compile Include="JJWMS\CARRIER.cs" />
+    <Compile Include="JJWMS\CARTONTYPE.cs" />
+    <Compile Include="JJWMS\CCPLAN.cs" />
+    <Compile Include="JJWMS\CCTASK.cs" />
+    <Compile Include="JJWMS\CF_PRIVILEGE.cs" />
+    <Compile Include="JJWMS\CF_ROLE.cs" />
+    <Compile Include="JJWMS\CF_USER.cs" />
+    <Compile Include="JJWMS\CF_USERROLE.cs" />
+    <Compile Include="JJWMS\COMPANY.cs" />
+    <Compile Include="JJWMS\CONTRACT.cs" />
+    <Compile Include="JJWMS\CURRENT_WAVE.cs" />
+    <Compile Include="JJWMS\CUSTOMER.cs" />
+    <Compile Include="JJWMS\DATAFILTER.cs" />
+    <Compile Include="JJWMS\DISPATCHNODE.cs" />
+    <Compile Include="JJWMS\Group.cs" />
+    <Compile Include="JJWMS\GROUPCOMPANY.cs" />
+    <Compile Include="JJWMS\GROUPWAREHOUSE.cs" />
+    <Compile Include="JJWMS\HANSTEMP1.cs" />
+    <Compile Include="JJWMS\HIS_DPS_CMD.cs" />
+    <Compile Include="JJWMS\INVENTORY.cs" />
+    <Compile Include="JJWMS\INVENTORYCHANGEPLAN.cs" />
+    <Compile Include="JJWMS\INVENTORYCHANGEPLANHISTORY.cs" />
+    <Compile Include="JJWMS\INVTRANSACTION.cs" />
+    <Compile Include="JJWMS\jjwmsModel.cs" />
+    <Compile Include="JJWMS\LOCATION.cs" />
+    <Compile Include="JJWMS\LOGINGLOG.cs" />
+    <Compile Include="JJWMS\LOTATTRTEMPLATE.cs" />
+    <Compile Include="JJWMS\LOTATTRTEMPLATEITEMS.cs" />
+    <Compile Include="JJWMS\LOTRECORDS.cs" />
+    <Compile Include="JJWMS\OLDSERIALNUMBER.cs" />
+    <Compile Include="JJWMS\ORDEREXCEPTION.cs" />
+    <Compile Include="JJWMS\ORDEREXCEPTIONDTL.cs" />
+    <Compile Include="JJWMS\ORDEREXCEPTIONLOG.cs" />
+    <Compile Include="JJWMS\ORDERLINE.cs" />
+    <Compile Include="JJWMS\ORDERS.cs" />
+    <Compile Include="JJWMS\ORDERSRECORD.cs" />
+    <Compile Include="JJWMS\PACK.cs" />
+    <Compile Include="JJWMS\PACKDETAIL.cs" />
+    <Compile Include="JJWMS\PDAVERSIONSETTINGS.cs" />
+    <Compile Include="JJWMS\PICKING.cs" />
+    <Compile Include="JJWMS\PICKINGLINE.cs" />
+    <Compile Include="JJWMS\PICKQUEUE.cs" />
+    <Compile Include="JJWMS\PICKS.cs" />
+    <Compile Include="JJWMS\PRINTER.cs" />
+    <Compile Include="JJWMS\PRINT_SKU.cs" />
+    <Compile Include="JJWMS\PURCHASE.cs" />
+    <Compile Include="JJWMS\PURCHASELINE.cs" />
+    <Compile Include="JJWMS\PUTAWAYSTRATEGY.cs" />
+    <Compile Include="JJWMS\PUTAWAYSTRATEGYDETAIL.cs" />
+    <Compile Include="JJWMS\RECEIPT.cs" />
+    <Compile Include="JJWMS\RECEIPTLINE.cs" />
+    <Compile Include="JJWMS\RECEIPTRECORD.cs" />
+    <Compile Include="JJWMS\RECEIPTRECORDQUEUE.cs" />
+    <Compile Include="JJWMS\SEQUENCES.cs" />
+    <Compile Include="JJWMS\SERIAL_INFO.cs" />
+    <Compile Include="JJWMS\SETTINGS.cs" />
+    <Compile Include="JJWMS\SKU.cs" />
+    <Compile Include="JJWMS\SKUSERIALNUMBERRECORDS.cs" />
+    <Compile Include="JJWMS\SKUSERIALNUMBERRECORDS_HIS.cs" />
+    <Compile Include="JJWMS\SP_DIS_SET.cs" />
+    <Compile Include="JJWMS\STATION.cs" />
+    <Compile Include="JJWMS\STN_CITY_MAP.cs" />
+    <Compile Include="JJWMS\SYS_MENU.cs" />
+    <Compile Include="JJWMS\SYS_RPT_MENU.cs" />
+    <Compile Include="JJWMS\TASKDETAIL.cs" />
+    <Compile Include="JJWMS\TASKDETAILHISTORY.cs" />
+    <Compile Include="JJWMS\TASKENGINE.cs" />
+    <Compile Include="JJWMS\TASKS.cs" />
+    <Compile Include="JJWMS\TYPETABLE.cs" />
+    <Compile Include="JJWMS\UNIT.cs" />
+    <Compile Include="JJWMS\USERCOMPANY.cs" />
+    <Compile Include="JJWMS\USERGROUP.cs" />
+    <Compile Include="JJWMS\USERWAREHOUSE.cs" />
+    <Compile Include="JJWMS\VENDOR.cs" />
+    <Compile Include="JJWMS\WAREHOUSE.cs" />
+    <Compile Include="JJWMS\WAREHOUSESKU.cs" />
+    <Compile Include="JJWMS\WAREHOUSESKUPICKLOCATION.cs" />
+    <Compile Include="JJWMS\WAREHOUSESKUTACTICS.cs" />
+    <Compile Include="JJWMS\WAVE.cs" />
+    <Compile Include="JJWMS\WAVEDETAIL.cs" />
+    <Compile Include="JJWMS\WAVEFLOW.cs" />
+    <Compile Include="JJWMS\WAVEFLOWDETAIL.cs" />
+    <Compile Include="JJWMS\WAVETEMPLATE.cs" />
+    <Compile Include="JJWMS\WAVE_ALL_RESULT.cs" />
+    <Compile Include="JJWMS\WAVE_CAL_RESULT.cs" />
+    <Compile Include="JJWMS\WAVE_CURR_SKU.cs" />
+    <Compile Include="JJWMS\WMSVERSION.cs" />
+    <Compile Include="JJWMS\WORKINGCHANGESKU.cs" />
+    <Compile Include="JJWMS\WORKPROFILE.cs" />
+    <Compile Include="JJWMS\WORKPROFILEDETAIL.cs" />
+    <Compile Include="JJWMS\WORKSHOP.cs" />
+    <Compile Include="JJWMS\WORK_LOG.cs" />
+    <Compile Include="JJWMS\WQFCARTON.cs" />
+    <Compile Include="JJWMS\ZONE.cs" />
+    <Compile Include="BaseData\OLDSERIALNUMBER.cs" />
+    <Compile Include="BaseData\ORDEREXCEPTION.cs" />
+    <Compile Include="BaseData\ORDEREXCEPTIONDTL.cs" />
+    <Compile Include="BaseData\ORDEREXCEPTIONLOG.cs" />
+    <Compile Include="BaseData\ORDERLINE.cs" />
+    <Compile Include="BaseData\ORDERLINEPICK.cs" />
+    <Compile Include="BaseData\ORDERS.cs" />
+    <Compile Include="BaseData\PACK.cs" />
+    <Compile Include="BaseData\PACKDETAIL.cs" />
+    <Compile Include="BaseData\PDAVERSIONSETTINGS.cs" />
+    <Compile Include="BaseData\PICKQUEUE.cs" />
+    <Compile Include="BaseData\PICKS.cs" />
+    <Compile Include="BaseData\PLANT.cs" />
+    <Compile Include="BaseData\PRINTER.cs" />
+    <Compile Include="BaseData\PRINT_SKU.cs" />
+    <Compile Include="Model1.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BaseData\PUTAWAYSTRATEGY.cs" />
+    <Compile Include="BaseData\PUTAWAYSTRATEGYDETAIL.cs" />
+    <Compile Include="BaseData\RECEIPT.cs" />
+    <Compile Include="BaseData\RECEIPTLINE.cs" />
+    <Compile Include="BaseData\RECEIPTRECORD.cs" />
+    <Compile Include="BaseData\RECEIPTRECORDQUEUE.cs" />
+    <Compile Include="BaseData\RFQRCODE.cs" />
+    <Compile Include="BaseData\SAPINUPLOAD.cs" />
+    <Compile Include="BaseData\SAPINUPLOADBODY.cs" />
+    <Compile Include="BaseData\SAPOUTUPLOAD.cs" />
+    <Compile Include="BaseData\SAPOUTUPLOADBODY.cs" />
+    <Compile Include="BaseData\SAPZIT_ALV.cs" />
+    <Compile Include="BaseData\SAP_ORDERINFO.cs" />
+    <Compile Include="BaseData\SAP_ORDERINFODETAIL.cs" />
+    <Compile Include="BaseData\SEQUENCES.cs" />
+    <Compile Include="BaseData\SERIAL_INFO.cs" />
+    <Compile Include="BaseData\SETTINGS.cs" />
+    <Compile Include="BaseData\SKU.cs" />
+    <Compile Include="BaseData\SKUMATERIAL.cs" />
+    <Compile Include="BaseData\SKUSERIALNUMBERRECORDS.cs" />
+    <Compile Include="BaseData\SKUSERIALNUMBERRECORDS_HIS.cs" />
+    <Compile Include="BaseData\SP_DIS_SET.cs" />
+    <Compile Include="BaseData\STATION.cs" />
+    <Compile Include="BaseData\STN_CITY_MAP.cs" />
+    <Compile Include="BaseData\SYS_MENU.cs" />
+    <Compile Include="BaseData\SYS_RPT_MENU.cs" />
+    <Compile Include="BaseData\TASKDETAIL.cs" />
+    <Compile Include="BaseData\TASKDETAILHISTORY.cs" />
+    <Compile Include="BaseData\TASKENGINE.cs" />
+    <Compile Include="BaseData\TASKS.cs" />
+    <Compile Include="BaseData\TTP.cs" />
+    <Compile Include="BaseData\USERCOMPANY.cs" />
+    <Compile Include="BaseData\USERGROUP.cs" />
+    <Compile Include="BaseData\USERWAREHOUSE.cs" />
+    <Compile Include="BaseData\VENDOR.cs" />
+    <Compile Include="BaseData\V_BUS_DPS_RETORREP.cs" />
+    <Compile Include="BaseData\V_DPS_HAVE_TASK.cs" />
+    <Compile Include="BaseData\V_DPS_TASK.cs" />
+    <Compile Include="BaseData\V_GETNEEDBINDORWORKINGORDER.cs" />
+    <Compile Include="BaseData\V_INVENTORY.cs" />
+    <Compile Include="BaseData\V_INVENTORY_FORORDEREXE.cs" />
+    <Compile Include="BaseData\V_MENU_AUTH.cs" />
+    <Compile Include="BaseData\V_MENU_AUTH_PARENT.cs" />
+    <Compile Include="BaseData\V_ORDER_ALLOC.cs" />
+    <Compile Include="BaseData\V_TASKDETAILORDER.cs" />
+    <Compile Include="BaseData\V_WAVE_CAL_RESULT.cs" />
+    <Compile Include="BaseData\WAREHOUSE.cs" />
+    <Compile Include="BaseData\WAREHOUSESKU.cs" />
+    <Compile Include="BaseData\WAREHOUSESKUPICKLOCATION.cs" />
+    <Compile Include="BaseData\WAREHOUSESKUTACTICS.cs" />
+    <Compile Include="BaseData\WAVE.cs" />
+    <Compile Include="BaseData\WAVEDETAIL.cs" />
+    <Compile Include="BaseData\WAVEFLOW.cs" />
+    <Compile Include="BaseData\WAVEFLOWDETAIL.cs" />
+    <Compile Include="BaseData\WAVETEMPLATE.cs" />
+    <Compile Include="BaseData\WAVE_ALL_RESULT.cs" />
+    <Compile Include="BaseData\WAVE_CAL_RESULT.cs" />
+    <Compile Include="BaseData\WAVE_CURR_SKU.cs" />
+    <Compile Include="BaseData\WCS_TRK.cs" />
+    <Compile Include="BaseData\WORKINGCHANGESKU.cs" />
+    <Compile Include="BaseData\WORKPROFILE.cs" />
+    <Compile Include="BaseData\WORKPROFILEDETAIL.cs" />
+    <Compile Include="BaseData\WORK_LOG.cs" />
+    <Compile Include="BaseData\WQFCARTON.cs" />
+    <Compile Include="BaseData\ZONE.cs" />
+    <Compile Include="UserTable.cs" />
+    <Compile Include="Utilitys.cs" />
+    <Compile Include="WMSTakModelFirst\Base_BackupJob.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\Base_Button.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\Base_ButtonPermission.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\Base_CodeRule.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\Base_CodeRuleDetail.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\Base_CodeRuleSerious.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\Base_Company.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\Base_DataDictionary.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\Base_DataDictionaryDetail.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\Base_DataScopePermission.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\Base_Department.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\Base_Email.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\Base_EmailAccessory.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\Base_EmailAddressee.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\Base_EmailCategory.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\Base_Employee.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\Base_ExcelImport.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\Base_ExcelImportDetail.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\Base_FormAttribute.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\Base_FormAttributeValue.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\Base_GroupUser.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\Base_InterfaceManage.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\Base_InterfaceManageParameter.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\Base_Language.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\Base_Module.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\Base_ModulePermission.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\Base_NetworkFile.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\Base_NetworkFolder.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\Base_ObjectUserRelation.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\Base_PhoneNote.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\Base_Post.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\Base_ProvinceCity.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\Base_QueryRecord.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\Base_Roles.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\Base_Shortcuts.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\Base_Supplies.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\Base_SysLog.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\Base_SysLogDetail.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\Base_User.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\Base_View.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\Base_ViewPermission.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\Base_ViewWhere.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\Base_ViewWherePermission.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\DB_Import_InPlanDetail.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\ModuleInfo.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\POOrder.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\POOrderEntry.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\SplitStr_Result.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\Table_location.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\View_AreaCode.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\View_InDettail.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\View_Location.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\View_LocationFunctionCode.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\View_OutDettail.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\View_OutTaskJHDetai.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\View_OutTaskZHDetail.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\View_Transit.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMSTakModelFirst.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WMSTakModelFirst.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMSTakModelFirst.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMSTakModelFirst.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WMSTakModelFirst.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_AllocationMain.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_AllocationPlanDetail.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_AllocationPlanMain.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_BHDetail.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_BHMain.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_BHTemp.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_BillNumber.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_BusinessInfo.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_CarInfo.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_CheckDetail.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_CheckMain.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_CheckPlanDetail.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_CheckPlanMain.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_ChildBatchManage.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_ContainerInfo.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_ContainerType.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_ExamineDetail.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_ExamineMain.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_InDetail.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_InMain.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_InOrderDetail.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_InOrderMain.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_InOrderTemp.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_InPlanDetail.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_InPlanMain.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_InPlanTemp.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_InTemp.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_JXD.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_JXDMX.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_LaneStatus.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_Location.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_LocationContainerMap.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_LocationFunction.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_Materials.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_MaterialsBusinessMap.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_MaterialsLocationMap.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_MaterialsSorts.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_MaterialStorageArea.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_OutDetail.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_OutMain.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_OutOrderDetail.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_OutOrderMain.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_OutPlanDetail.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_OutPlanMain.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_OutPlanTemp.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_OutTask.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_OutTaskBHDetail.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_OutTaskBHMain.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_OutTaskJHDetail.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_OutTaskJHMain.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_OutTaskZHDetail.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_OutTaskZHMain.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_OutTemp.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_PackSpec.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_PrinthHstoryTable.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_PrintTable.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_ProductBatch.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_QualityCheck.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_RebuildApplyDetail.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_RebuildApplyMain.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_RebuildMain.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_RebuildPlanDetail.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_RebuildPlanMain.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_Stockpile.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_StorageArea.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_StorageAreaMaterialMap.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_SupplierMaterialsStorageArea.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_Tasks.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_TasksMainTemp.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_TasksTemp.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_TasksType.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_TaskTypePostMap.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_Transit.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_TransitMain.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_UnloadingPlace.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_ZHDetail.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_ZHMain.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\WMS_ZHTemp.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTakModelFirst\XPObjectType.cs">
+      <DependentUpon>WMSTakModelFirst.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WMSTak\BASE_BUTTON.cs" />
+    <Compile Include="WMSTak\BASE_BUTTONPERMISSION.cs" />
+    <Compile Include="WMSTak\BASE_CODERULE.cs" />
+    <Compile Include="WMSTak\BASE_CODERULEDETAIL.cs" />
+    <Compile Include="WMSTak\BASE_CODERULESERIOUS.cs" />
+    <Compile Include="WMSTak\BASE_COMPANY.cs" />
+    <Compile Include="WMSTak\BASE_DATADICTIONARY.cs" />
+    <Compile Include="WMSTak\BASE_DATADICTIONARYDETAIL.cs" />
+    <Compile Include="WMSTak\BASE_DATASCOPEPERMISSION.cs" />
+    <Compile Include="WMSTak\BASE_DEPARTMENT.cs" />
+    <Compile Include="WMSTak\BASE_EMAIL.cs" />
+    <Compile Include="WMSTak\BASE_EMAILACCESSORY.cs" />
+    <Compile Include="WMSTak\BASE_EMAILADDRESSEE.cs" />
+    <Compile Include="WMSTak\BASE_EMAILCATEGORY.cs" />
+    <Compile Include="WMSTak\BASE_EMPLOYEE.cs" />
+    <Compile Include="WMSTak\BASE_EXCELIMPORT.cs" />
+    <Compile Include="WMSTak\BASE_EXCELIMPORTDETAIL.cs" />
+    <Compile Include="WMSTak\BASE_FORMATTRIBUTE.cs" />
+    <Compile Include="WMSTak\BASE_FORMATTRIBUTEVALUE.cs" />
+    <Compile Include="WMSTak\BASE_GROUPUSER.cs" />
+    <Compile Include="WMSTak\BASE_INTERFACEMANAGE.cs" />
+    <Compile Include="WMSTak\BASE_INTERFACEMANAGEPARAMETER.cs" />
+    <Compile Include="WMSTak\BASE_LANGUAGE.cs" />
+    <Compile Include="WMSTak\BASE_MODULE.cs" />
+    <Compile Include="WMSTak\BASE_MODULEPERMISSION.cs" />
+    <Compile Include="WMSTak\BASE_NETWORKFILE.cs" />
+    <Compile Include="WMSTak\BASE_NETWORKFOLDER.cs" />
+    <Compile Include="WMSTak\BASE_OBJECTUSERRELATION.cs" />
+    <Compile Include="WMSTak\BASE_PHONENOTE.cs" />
+    <Compile Include="WMSTak\BASE_POST.cs" />
+    <Compile Include="WMSTak\BASE_PROVINCECITY.cs" />
+    <Compile Include="WMSTak\BASE_QUERYRECORD.cs" />
+    <Compile Include="WMSTak\BASE_ROLES.cs" />
+    <Compile Include="WMSTak\BASE_SHORTCUTS.cs" />
+    <Compile Include="WMSTak\BASE_SUPPLIES.cs" />
+    <Compile Include="WMSTak\BASE_SYSLOG.cs" />
+    <Compile Include="WMSTak\BASE_SYSLOGDETAIL.cs" />
+    <Compile Include="WMSTak\BASE_USER.cs" />
+    <Compile Include="WMSTak\BASE_VIEW.cs" />
+    <Compile Include="WMSTak\BASE_VIEWPERMISSION.cs" />
+    <Compile Include="WMSTak\BASE_VIEWWHERE.cs" />
+    <Compile Include="WMSTak\BASE_VIEWWHEREPERMISSION.cs" />
+    <Compile Include="WMSTak\DB_IMPORT_INPLANDETAIL.cs" />
+    <Compile Include="WMSTak\MODULEINFO.cs" />
+    <Compile Include="WMSTak\POORDER.cs" />
+    <Compile Include="WMSTak\POORDERENTRY.cs" />
+    <Compile Include="WMSTak\TABLE_LOCATION.cs" />
+    <Compile Include="WMSTak\VIEW_AREACODE.cs" />
+    <Compile Include="WMSTak\VIEW_INDETTAIL.cs" />
+    <Compile Include="WMSTak\VIEW_LOCATIONFUNCTIONCODE.cs" />
+    <Compile Include="WMSTak\VIEW_OUTDETTAIL.cs" />
+    <Compile Include="WMSTak\VIEW_OUTTASKJHDETAI.cs" />
+    <Compile Include="WMSTak\VIEW_OUTTASKZHDETAIL.cs" />
+    <Compile Include="WMSTak\VIEW_TRANSIT.cs" />
+    <Compile Include="WMSTak\WMSTakModel.cs" />
+    <Compile Include="WMSTak\WMS_ALLOCATIONMAIN.cs" />
+    <Compile Include="WMSTak\WMS_ALLOCATIONPLANDETAIL.cs" />
+    <Compile Include="WMSTak\WMS_ALLOCATIONPLANMAIN.cs" />
+    <Compile Include="WMSTak\WMS_BHDETAIL.cs" />
+    <Compile Include="WMSTak\WMS_BHMAIN.cs" />
+    <Compile Include="WMSTak\WMS_BHTEMP.cs" />
+    <Compile Include="WMSTak\WMS_BILLNUMBER.cs" />
+    <Compile Include="WMSTak\WMS_BUSINESSINFO.cs" />
+    <Compile Include="WMSTak\WMS_CARINFO.cs" />
+    <Compile Include="WMSTak\WMS_CHECKDETAIL.cs" />
+    <Compile Include="WMSTak\WMS_CHECKMAIN.cs" />
+    <Compile Include="WMSTak\WMS_CHECKPLANDETAIL.cs" />
+    <Compile Include="WMSTak\WMS_CHECKPLANMAIN.cs" />
+    <Compile Include="WMSTak\WMS_CHILDBATCHMANAGE.cs" />
+    <Compile Include="WMSTak\WMS_CONTAINERINFO.cs" />
+    <Compile Include="WMSTak\WMS_CONTAINERTYPE.cs" />
+    <Compile Include="WMSTak\WMS_EXAMINEDETAIL.cs" />
+    <Compile Include="WMSTak\WMS_EXAMINEMAIN.cs" />
+    <Compile Include="WMSTak\WMS_INDETAIL.cs" />
+    <Compile Include="WMSTak\WMS_INMAIN.cs" />
+    <Compile Include="WMSTak\WMS_INORDERDETAIL.cs" />
+    <Compile Include="WMSTak\WMS_INORDERMAIN.cs" />
+    <Compile Include="WMSTak\WMS_INORDERTEMP.cs" />
+    <Compile Include="WMSTak\WMS_INPLANDETAIL.cs" />
+    <Compile Include="WMSTak\WMS_INPLANMAIN.cs" />
+    <Compile Include="WMSTak\WMS_INPLANTEMP.cs" />
+    <Compile Include="WMSTak\WMS_INTEMP.cs" />
+    <Compile Include="WMSTak\WMS_JXD.cs" />
+    <Compile Include="WMSTak\WMS_JXDMX.cs" />
+    <Compile Include="WMSTak\WMS_LANESTATUS.cs" />
+    <Compile Include="WMSTak\WMS_LOCATION.cs" />
+    <Compile Include="WMSTak\WMS_LOCATIONCONTAINERMAP.cs" />
+    <Compile Include="WMSTak\WMS_LOCATIONFUNCTION.cs" />
+    <Compile Include="WMSTak\WMS_MATERIALS.cs" />
+    <Compile Include="WMSTak\WMS_MATERIALSBUSINESSMAP.cs" />
+    <Compile Include="WMSTak\WMS_MATERIALSLOCATIONMAP.cs" />
+    <Compile Include="WMSTak\WMS_MATERIALSSORTS.cs" />
+    <Compile Include="WMSTak\WMS_MATERIALSTORAGEAREA.cs" />
+    <Compile Include="WMSTak\WMS_OUTDETAIL.cs" />
+    <Compile Include="WMSTak\WMS_OUTMAIN.cs" />
+    <Compile Include="WMSTak\WMS_OUTORDERDETAIL.cs" />
+    <Compile Include="WMSTak\WMS_OUTORDERMAIN.cs" />
+    <Compile Include="WMSTak\WMS_OUTPLANDETAIL.cs" />
+    <Compile Include="WMSTak\WMS_OUTPLANMAIN.cs" />
+    <Compile Include="WMSTak\WMS_OUTPLANTEMP.cs" />
+    <Compile Include="WMSTak\WMS_OUTTASK.cs" />
+    <Compile Include="WMSTak\WMS_OUTTASKBHDETAIL.cs" />
+    <Compile Include="WMSTak\WMS_OUTTASKBHMAIN.cs" />
+    <Compile Include="WMSTak\WMS_OUTTASKJHDETAIL.cs" />
+    <Compile Include="WMSTak\WMS_OUTTASKJHMAIN.cs" />
+    <Compile Include="WMSTak\WMS_OUTTASKZHDETAIL.cs" />
+    <Compile Include="WMSTak\WMS_OUTTASKZHMAIN.cs" />
+    <Compile Include="WMSTak\WMS_OUTTEMP.cs" />
+    <Compile Include="WMSTak\WMS_PACKSPEC.cs" />
+    <Compile Include="WMSTak\WMS_PRINTHHSTORYTABLE.cs" />
+    <Compile Include="WMSTak\WMS_PRINTTABLE.cs" />
+    <Compile Include="WMSTak\WMS_PRODUCTBATCH.cs" />
+    <Compile Include="WMSTak\WMS_QUALITYCHECK.cs" />
+    <Compile Include="WMSTak\WMS_REBUILDAPPLYDETAIL.cs" />
+    <Compile Include="WMSTak\WMS_REBUILDAPPLYMAIN.cs" />
+    <Compile Include="WMSTak\WMS_REBUILDMAIN.cs" />
+    <Compile Include="WMSTak\WMS_REBUILDPLANDETAIL.cs" />
+    <Compile Include="WMSTak\WMS_REBUILDPLANMAIN.cs" />
+    <Compile Include="WMSTak\WMS_STOCKPILE.cs" />
+    <Compile Include="WMSTak\WMS_STORAGEAREA.cs" />
+    <Compile Include="WMSTak\WMS_STORAGEAREAMATERIALMAP.cs" />
+    <Compile Include="WMSTak\WMS_SUPPLIERMTLSTORAGEAREA.cs" />
+    <Compile Include="WMSTak\WMS_SUPPLIERMTLSTOTAGEAREA.cs" />
+    <Compile Include="WMSTak\WMS_TASKDETAIL.cs" />
+    <Compile Include="WMSTak\WMS_TASKDETAILHISTORY.cs" />
+    <Compile Include="WMSTak\WMS_TASKENGINE.cs" />
+    <Compile Include="WMSTak\WMS_TASKS.cs" />
+    <Compile Include="WMSTak\WMS_TASKSMAINTEMP.cs" />
+    <Compile Include="WMSTak\WMS_TASKSTEMP.cs" />
+    <Compile Include="WMSTak\WMS_TASKSTYPE.cs" />
+    <Compile Include="WMSTak\WMS_TASKTYPEPOSTMAP.cs" />
+    <Compile Include="WMSTak\WMS_TRANSIT.cs" />
+    <Compile Include="WMSTak\WMS_TRANSITMAIN.cs" />
+    <Compile Include="WMSTak\WMS_UNLOADINGPLACE.cs" />
+    <Compile Include="WMSTak\WMS_ZHDETAIL.cs" />
+    <Compile Include="WMSTak\WMS_ZHMAIN.cs" />
+    <Compile Include="WMSTak\WMS_ZHTEMP.cs" />
+    <Compile Include="WMSTak\XPOBJECTTYPE.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <EntityDeploy Include="WMSTakModelFirst\WMSTakModelFirst.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>WMSTakModelFirst.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="WMSTakModelFirst\WMSTakModelFirst.edmx.diagram">
+      <DependentUpon>WMSTakModelFirst.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="WMSTakModelFirst\WMSTakModelFirst.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>WMSTakModelFirst.edmx</DependentUpon>
+      <LastGenOutput>WMSTakModelFirst.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="WMSTakModelFirst\WMSTakModelFirst.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>WMSTakModelFirst.edmx</DependentUpon>
+      <LastGenOutput>WMSTakModelFirst.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tools\Tools.csproj">
+      <Project>{8219519e-9232-401a-823c-87a4c7ef0211}</Project>
+      <Name>Tools</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
